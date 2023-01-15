@@ -1,0 +1,6 @@
+#################################################
+#             Spring Kafka Demo                 #
+# author: mmarcosab                             #
+# creation date: 15/01/2023                     #
+# repo: https://github.com/mmarcosab/kafka-demo #
+#################################################

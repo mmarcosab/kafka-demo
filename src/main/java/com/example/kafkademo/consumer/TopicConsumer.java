@@ -12,11 +12,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class TopicConsumer {
 
-    @Value("${topic.name.consumer")
+    @Value("${topic.name.consumer}")
     private String topicName;
 
     @KafkaListener(topics = "${topic.name.consumer}", groupId = "group_id")
-    public void consume(ConsumerRecord<String, String> payload){log.info("Tópico: {}", topicName);
+    public void consume(ConsumerRecord<String, String> payload){
+        log.info("Topic: {}", topicName);
         log.info("key: {}", payload.key());
         log.info("Headers: {}", payload.headers());
         log.info("Partion: {}", payload.partition());
